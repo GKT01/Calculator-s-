@@ -10,27 +10,27 @@ int main(int argc, char *argv[]){
     char request_input;
     do {
 
-    printf("Please put an input (+ - * / , . to terminate) : ");
+    printf("Please put an input (+ - * / , . to terminate): ");
     scanf(" %c", &request_input);
 
     switch (request_input){
     case '+':
         AddTwoNumbers();
-        continue;
+        break;
     case '-':
         SubstractTwoNumbers();
-        continue;
+        break;
     case '*':
         MultiplyTwoNumbers();
-        continue;
+        break;
     case '/':
         DivideTwoNumbers();
-        continue; 
+        break; 
     case '.':
         break;
     default:
         printf("Wrong Input please try again:");
-        continue;} 
+        break;} 
     }while(request_input != '.');
 
     
