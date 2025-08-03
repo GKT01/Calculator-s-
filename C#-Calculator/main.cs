@@ -14,27 +14,34 @@ namespace Main
                 Console.Write("Please put an input (+ - * /, . to terminate): ");
                 request_input = Convert.ToChar(Console.ReadLine());
 
-                switch (request_input)
+                if (request_input != '\0')
                 {
-                    case '+':
-                        AddTwoNumbers();
-                        break;
-                    case '-':
-                        SubstractTwoNumbers();
-                        break;
-                    case '*':
-                        MultiplyTwoNumbers();
-                        break;
-                    case '/':
-                        DivideTwoNumbers();
-                        break;
-                    case '.':
-                        Console.WriteLine("Quitting..");
-                        break;
-                    default:
-                        Console.WriteLine("Please put an Valid Input.");
-                        break;
+                    switch (request_input)
+                    {
+                        case '+':
+                            AddTwoNumbers();
+                            break;
+                        case '-':
+                            SubstractTwoNumbers();
+                            break;
+                        case '*':
+                            MultiplyTwoNumbers();
+                            break;
+                        case '/':
+                            DivideTwoNumbers();
+                            break;
+                        case '.':
+                            Console.WriteLine("Quitting..");
+                            break;
+                        default:
+                            Console.WriteLine("Please put an Valid Input.");
+                            break;
 
+                    }
+                }
+                else
+                {
+                   Console.WriteLine("Please put an Valid Input.");
                 }
             } while (request_input != '.');
         }
